@@ -14,7 +14,9 @@ services:
 addons:
   hosts:
     - petstore.swagger.io
-
+  artifacts:
+    s3_region: "ireland" # defaults to "us-east-1"
+    
 before_install:
   # required when sudo: required for the Ruby petstore tests
   - gem install bundler
